@@ -61,6 +61,38 @@ In TD, at every time step t they immediately form a TD target using the observed
 The simplest TD method, known as TD(0)
 V (St) ← V (St) + α (Rt+1 + γV (St+1) − V (St))
 
+
+Now let’s focus on TD- Control
+Just like in Monte Carlo , we use policy iteration for TD Control
+The first step is to learn an action-value function rather than a state-value function.
+There are two algorithms in TD control
+
+* 1. SARSA ( state-action-reward-state-action)
+
+→The agent starts in S1, performs A1, and gets R1, and goes to S2
+
+→Now the agent chooses another action A2 from S2
+
+→Then updates the value of A1 performed in S1.
+
+That gives the above equation.
+S → current state, A → current action, R → current reward
+S → next state, A → next action
+
+
+* 2. Q-learning aka SARSAMAX
+
+One of the most important breakthroughs in reinforcement learning was the development of an off-policy TD control algorithm known as Q-learning
+Q-learning estimates a state-action value function for a target policy that deterministically selects the action of highest value
+
+
+* SARSA
+→ On policy learning method , means it uses the same policy to choose the next action A
+
+* Q-Learning
+→ Off policy learning method , means, it uses the target policy (greedy) to choose the best next action, A while following the behavior policy (epsilon-greedy)
+
+
 ## Reference links
 
 https://medium.com/deep-math-machine-learning-ai/ch-12-1-model-free-reinforcement-learning-algorithms-monte-carlo-sarsa-q-learning-65267cb8d1b4
