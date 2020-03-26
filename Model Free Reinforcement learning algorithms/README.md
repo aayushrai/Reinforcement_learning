@@ -89,7 +89,7 @@ Q-learning estimates a state-action value function for a target policy that dete
 Expected Sarsa exploits knowledge about stochasticity in the behavior policy to perform updates with lower variance. Doing so allows for higher learning rates and thus faster learning. In deterministic environments, Expected Sarsas updates have zero variance, enabling a learning rate of 1. We prove that Expected Sarsa converges under the same conditions as Sarsa and formulate specific hypotheses about when Expected Sarsa will outperform Sarsa and Q-learning. Experiments in multiple domains confirm these hypotheses and demonstrate that Expected Sarsa has significant advantages over these more commonly used methods.
 
 
-![image](https://github.com/aayushrai/Reinforcement_learning/blob/master/Model%20Free%20Reinforcement%20learning%20algorithms/image/Capture.JPG)
+![image](https://github.com/aayushrai/Reinforcement_learning/blob/master/Model%20Free%20Reinforcement%20learning%20algorithms/Images/Capture.JPG)
 
 
 * SARSA
