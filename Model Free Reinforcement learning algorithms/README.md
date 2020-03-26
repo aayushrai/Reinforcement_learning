@@ -92,6 +92,8 @@ Q-learning estimates a state-action value function for a target policy that dete
 * Q-Learning
 → Off policy learning method , means, it uses the target policy (greedy) to choose the best next action, A while following the behavior policy (epsilon-greedy)
 
+![image](https://github.com/aayushrai/Reinforcement_learning/blob/master/Model%20Free%20Reinforcement%20learning%20algorithms/image/Capture.JPG)
+
 
 ## Reference links
 
