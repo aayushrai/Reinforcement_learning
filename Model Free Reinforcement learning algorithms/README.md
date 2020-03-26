@@ -69,11 +69,9 @@ There are two algorithms in TD control
 
 1. SARSA ( state-action-reward-state-action)
 
-→The agent starts in S1, performs A1, and gets R1, and goes to S2
-
-→Now the agent chooses another action A2 from S2
-
-→Then updates the value of A1 performed in S1.
+The agent starts in S1, performs A1, and gets R1, and goes to S2
+Now the agent chooses another action A2 from S2
+Then updates the value of A1 performed in S1.
 
 That gives the above equation.
 S → current state, A → current action, R → current reward
@@ -90,14 +88,15 @@ Q-learning estimates a state-action value function for a target policy that dete
 
 Expected Sarsa exploits knowledge about stochasticity in the behavior policy to perform updates with lower variance. Doing so allows for higher learning rates and thus faster learning. In deterministic environments, Expected Sarsas updates have zero variance, enabling a learning rate of 1. We prove that Expected Sarsa converges under the same conditions as Sarsa and formulate specific hypotheses about when Expected Sarsa will outperform Sarsa and Q-learning. Experiments in multiple domains confirm these hypotheses and demonstrate that Expected Sarsa has significant advantages over these more commonly used methods.
 
+
+![image](https://github.com/aayushrai/Reinforcement_learning/blob/master/Model%20Free%20Reinforcement%20learning%20algorithms/image/Capture.JPG)
+
+
 * SARSA
 → On policy learning method , means it uses the same policy to choose the next action A
 
 * Q-Learning
 → Off policy learning method , means, it uses the target policy (greedy) to choose the best next action, A while following the behavior policy (epsilon-greedy)
-
-![image](https://github.com/aayushrai/Reinforcement_learning/blob/master/Model%20Free%20Reinforcement%20learning%20algorithms/image/Capture.JPG)
-
 
 
 ## Difference b/w MC and TD
