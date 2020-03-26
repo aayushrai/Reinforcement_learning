@@ -6,8 +6,8 @@ All model free learning algorithms are gonna the learn value functions directly 
 
 ## There are few approaches for solving these kind of problems
 
-1.Monte carlo approach
-2.Temporal-Difference approach
+* Monte carlo approach
+* Temporal-Difference approach
 
 ## Monte carlo approach
 
@@ -30,10 +30,10 @@ Monte Carlo takes means of episodes. Period!
 
 There are two different types in MC
 
-1.First visit MC
+* First visit MC
 in this, we average returns only for first time s is visited in an episode
 
-2. Every visit MC
+* Every visit MC
 in this, we average returns for every time s is visited in an episode
 let’s take a sample episode
 
@@ -53,11 +53,14 @@ Just like Monte Carlo → TD methods learn directly from episodes of experience 
 
 Just like Dynamic Programming → TD methods boot strap , meaning it will not wait until the end of the episode to update the expected future reward estimation(V) , it will only wait until the next time step to update the value estimates.
 
-for example
-in MC
+For example:
+In MC
 V(s) = E [Gt | St = s] and Gt = Rt+1+ γRt+2+…
-in TD & DP
 
-in TD, at every time step t they immediately form a TD target using the observed reward Rt+1 and the current estimate V(St+1).
+In TD, at every time step t they immediately form a TD target using the observed reward Rt+1 and the current estimate V(St+1).
 The simplest TD method, known as TD(0)
 V (St) ← V (St) + α (Rt+1 + γV (St+1) − V (St))
+
+## Reference links
+
+https://medium.com/deep-math-machine-learning-ai/ch-12-1-model-free-reinforcement-learning-algorithms-monte-carlo-sarsa-q-learning-65267cb8d1b4
