@@ -67,7 +67,7 @@ Just like in Monte Carlo , we use policy iteration for TD Control
 The first step is to learn an action-value function rather than a state-value function.
 There are two algorithms in TD control
 
-* 1. SARSA ( state-action-reward-state-action)
+1. SARSA ( state-action-reward-state-action)
 
 →The agent starts in S1, performs A1, and gets R1, and goes to S2
 
@@ -80,11 +80,15 @@ S → current state, A → current action, R → current reward
 S → next state, A → next action
 
 
-* 2. Q-learning aka SARSAMAX
+2. Q-learning aka SARSAMAX
 
 One of the most important breakthroughs in reinforcement learning was the development of an off-policy TD control algorithm known as Q-learning
 Q-learning estimates a state-action value function for a target policy that deterministically selects the action of highest value
 
+
+3. Expected Sarsa
+
+Expected Sarsa exploits knowledge about stochasticity in the behavior policy to perform updates with lower variance. Doing so allows for higher learning rates and thus faster learning. In deterministic environments, Expected Sarsas updates have zero variance, enabling a learning rate of 1. We prove that Expected Sarsa converges under the same conditions as Sarsa and formulate specific hypotheses about when Expected Sarsa will outperform Sarsa and Q-learning. Experiments in multiple domains confirm these hypotheses and demonstrate that Expected Sarsa has significant advantages over these more commonly used methods.
 
 * SARSA
 → On policy learning method , means it uses the same policy to choose the next action A
@@ -94,6 +98,27 @@ Q-learning estimates a state-action value function for a target policy that dete
 
 ![image](https://github.com/aayushrai/Reinforcement_learning/blob/master/Model%20Free%20Reinforcement%20learning%20algorithms/image/Capture.JPG)
 
+
+
+## Difference b/w MC and TD
+
+Monte-Carlo
+→ it only works for episodic tasks
+→ it can only learn from complete sequences
+→it has to wait until the end of the episode to get the reward
+
+TD
+→ it only for both episodic and continuous tasks
+→it can learn from incomplete sequences
+→ it will only wait until the next time step to update the value estimates.
+
+Summary
+→ We use model free algorithms when Transition probability P (dynamics of the system)is not given in MDP.
+→ Monte Carlo takes the means of episodes to calculate the V and Q values for both prediction and control tasks.
+→ TD combines the features of both DP and MC by learning through interacting with the environment with bootstrapping.
+→ We use epsilon greedy policy to avoid the exploration problem in the env.
+→ Sarsa updates the Q value by choosing the current action and next action using the same policy, making it an on policy method.
+→ Q-learning updates Q values by acting greedily on the environment while following another policy, making it an off policy method.
 
 ## Reference links
 
